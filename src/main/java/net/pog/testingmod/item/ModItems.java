@@ -13,8 +13,10 @@ import net.pog.testingmod.TestingMod;
 public class ModItems {
 
     public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
+    public static final Item RUBY_PIECE = registerItem("ruby_piece", new Item(new FabricItemSettings()));
     private static void addItemsToIngridientItemGroup(FabricItemGroupEntries entries){
         entries.add(RUBY);
+        entries.add(RUBY_PIECE);
     }
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(TestingMod.MOD_ID, name), item);
